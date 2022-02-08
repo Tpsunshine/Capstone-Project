@@ -1,0 +1,91 @@
+<main class="main">
+    <section id="profile-form" class="profile-form">
+        <div class="container" style="margin-left:250px;width: 500px; background: transparent;padding-top:5%;">
+        <div class="panel panel-primary" >
+            <div class="panel-heading">
+              <h1>{{userinfo.firstname}} {{userinfo.lastname}}'s Student Profile</h1>  
+          <!--      <button style="margin-left:10px;" class="btn btn-default" [routerLink]="['/users']">contact List</button>
+            <button (click)="logoutProfile()" style="margin-left:10px;" class="btn btn-warning"> Logout</button>
+          -->
+            </div>
+
+            <div class="panel-body">
+                <div *ngIf="userinfo" class="row">
+                    <div class="col-md-12">
+                      <h2 *ngIf="userinfo._id"></h2>
+                      <h2 *ngIf="!userinfo._id"></h2>
+                    </div>
+                  </div>
+                  <div *ngIf="userinfo" class="row">
+                    <form class="col-md-12">
+                      <div class="form-group">
+                        <div *ngIf="userinfo.username">
+                            <label for="userinfo-username">UserName</label>
+                            <input class="form-control" name="userinfo-username" [(ngModel)]="userinfo.username" placeholder="userName"/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div *ngIf="userinfo.name">
+                            <label for="userinfo-name">UserName</label>
+                            <input class="form-control" name="userinfo-name" [(ngModel)]="userinfo.name" placeholder="userName"/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="userinfo-firstname">FirstName</label>
+                        <input class="form-control" name="userinfo-firstname" [(ngModel)]="userinfo.firstname" placeholder="Firstname"/>
+                      </div>
+                      <div class="form-group">
+                        <label for="userinfo-lastname">LastName</label>
+                        <input class="form-control" name="userinfo-lastname" [(ngModel)]="userinfo.lastname" placeholder="Lastname"/>
+                      </div>
+                      <div class="form-group">
+                        <label for="userinfo-email">Email</label>
+                        <input class="form-control" name="userinfo-email" [(ngModel)]="userinfo.email" placeholder="support@mlab.com"/>
+                      </div>
+                      <div class="form-group">
+                        <label for="userinfo-password">Password</label>
+                        <input class="form-control" type="password" name="userinfo-password" [(ngModel)]="userinfo.password" />
+                      </div>
+                      <div class="form-group">
+                        <label for="userinfo-phone-mobile">Mobile</label>
+                        <input class="form-control" name="userinfo-phone-mobile" [(ngModel)]="userinfo.mobile" placeholder="1234567890"/>
+                      </div>
+                      <div class="form-group">
+                        <label for="userinfo-phone-work">Work</label>
+                        <input class="form-control" name="userinfo-phone-work" [(ngModel)]="userinfo.work" placeholder="0123456789"/>
+                      </div>
+                    </form>
+                      <button class="btn btn-primary" *ngIf="!userinfo._id" (click)="createNewContact(userinfo)" >Create</button>
+                      <button class="btn btn-info" *ngIf="userinfo._id" (click)="updateContact(userinfo)" >Update</button>
+                      <button class="btn btn-danger" *ngIf="userinfo._id" (click)="deleteContact(userinfo._id)" >Delete</button>
+                  </div>
+                  
+                 </div>
+
+  
+                 <div class="col-md-12 col-md-offset-2" style="margin-top:-500px;margin-left:550px;">
+                  <div class="panel panel-primary" >
+                    <div class="panel-heading">
+                      <h1>{{userinfo.firstname}} {{userinfo.lastname}}'s Enrollment</h1>  
+                  <!--      <button style="margin-left:10px;" class="btn btn-default" [routerLink]="['/users']">contact List</button>
+                    <button (click)="logoutProfile()" style="margin-left:10px;" class="btn btn-warning"> Logout</button>
+                  -->
+                    </div>
+                  <div class="panel-body">
+                     <app-enrollment
+                              [enrollMessage]="userinfo.lastname"
+                            
+                             [createHandler]="addEnroll"
+                             [updateHandler]="updateEnroll"
+                             [deleteHandler]="deleteEnroll">
+                        </app-enrollment>
+                    </div>
+                  </div>
+                  </div>
+ 
+                  </div>
+        </div>   
+</section>
+</main>
+
+

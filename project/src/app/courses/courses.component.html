@@ -1,0 +1,32 @@
+
+      <div *ngIf="course" class="row">
+        <div class="col-md-6" style="margin-left:-30%;margin-top:10px">
+        </div>
+      </div>
+         <div *ngIf="course" class="row col-md-18" >
+              <label for="course-name" style="margin-left:20px">Course Name:
+                  <input class="form-control" name="course-name" [(ngModel)]="course.coursename" placeholder=""/>
+                </label>
+            <div class="form-group">
+              <label for="course-credits" style="margin-left:20px">Credit Hours:
+                  <input class="form-control" name="course-credit" [(ngModel)]="course.credit" placeholder=""/>
+                </label>
+            </div>
+            <div class="form-group">
+              <label for="course-dates" style="margin-left:20px">course dates:
+                  <input class="form-control" name="course-dates" [(ngModel)]="course.dates" placeholder=""/>
+                </label>
+            </div>
+            <div class="form-group">
+              <label for="course-teacher" style="margin-left:20px">Teacher: 
+                  <input class="form-control" name="course-teacher" [(ngModel)]="course.teacher" placeholder=""/>
+              </label>
+            </div>
+            <div style="margin-top:50px;margin-left: -300px;">
+                <button class="btn btn-primary"  (click)="createCourse(course)" >Create</button>
+               <button class="btn btn-info" (click)="updateCourse(course)" >Update</button>
+               <button class="btn btn-danger"  (click)="deleteCourse(course._id)" >Delete</button>
+            </div>
+    </div>
+
+

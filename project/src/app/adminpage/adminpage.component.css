@@ -1,0 +1,35 @@
+section {
+    padding: 5% 0 15% 0;
+    overflow: hidden;
+  }
+  
+  .admin-bg {
+    background-color: #f7f7f7;
+  }
+  
+  .admin-form {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .admin-form h2{   text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .admin-form h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #1bbd36;
+    bottom: 0;
+    left: calc(50% - 25px);
+  }
+  
+  .admin-form p {
+    margin-bottom: 0;
+  }
+  

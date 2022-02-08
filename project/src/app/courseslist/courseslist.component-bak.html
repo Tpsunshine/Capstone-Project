@@ -1,0 +1,35 @@
+<br/>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        User List
+    </div>
+    <div class="panel-body">
+  
+     <table class="table">
+         <thead>
+             <tr>
+             <th>name</th>
+             <th>Role</th>
+            </tr>
+         </thead>
+         <tbody>
+             <tr *ngFor="let user of userlist">
+                 <td>
+                     <input type="text" value={{user.name}}>
+                 </td>
+                 
+                 <td>
+                     <input type="text" value={{user.role}}>
+                 </td>
+                 <button class="btn btn-info" *ngIf="user._id" (click)="updateContact(contact)">Update</button>
+                  <button class="btn btn-danger" *ngIf="user._id" (click)="deleteContact(contact._id)">Delete</button>
+                </td>
+                </tr>
+         </tbody>
+     </table>
+
+        <button (click)="logout()" class="btn btn-warning">Logout</button>
+            <button (click)="Back()" class="btn btn-warning"> Back</button>
+            
+    </div>
+</div>

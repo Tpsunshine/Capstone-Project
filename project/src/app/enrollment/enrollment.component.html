@@ -1,0 +1,43 @@
+<div class="panel-body">
+  <h2>Class enrollment {{enrollMessage}}</h2>
+<div class="row col-md-12">
+  <div *ngIf="!enroll" >
+<div class="form-group">
+  <label style="margin-left:-10px;">Teachers Email: </label><label style="margin-left:10px"></label>
+ <div>
+  <select (change)="onSelectTeacher($event.target.value)" [(ngModel)]="selectedTeacher" >
+        <option *ngFor="let enrolles of teachers" value={{enrolles.lastname}} >
+              {{enrolles.email}}
+          </option>
+        </select>
+      </div>
+
+<br/>
+
+  <label style="margin-left:-10px;">Courses: </label><label style="margin-left:10px"></label>
+  <div>
+    <select (change)="onSelectCourses($event.target.value)" [(ngModel)]="selectedCourses" >
+        <option *ngFor="let enrolles of courseslist" value={{enrolles.coursename}},{{enrolles.credit}} >
+              {{enrolles.coursename}}
+          </option>
+        </select>
+      </div>
+</div>
+  </div>
+<div class="row col-md-12">
+
+    <div class="form-group">
+    <div  style="margin-top: 20px">
+      <button class="btn btn-primary"   (click)="createEnroll()" >Create</button>
+        <button class="btn btn-info "   (click)="updateEnroll(enroll)" >Update</button>
+      <button class="btn btn-danger "    (click)="deleteEnroll(enroll._id)" >Delete</button>
+    </div>
+    </div>
+</div>
+<div class="panel-body">
+  <app-enrolluserdisplay
+           [enrollMessages]="enrollMessage">
+     </app-enrolluserdisplay>
+ </div>
+  </div>
+  

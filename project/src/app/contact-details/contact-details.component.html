@@ -1,0 +1,84 @@
+<div *ngIf="contact" class="row">
+    <div class="col-md-6" style="margin-left:-30%;margin-top:10px">
+    </div>
+  </div>
+  <div *ngIf="contact " class="row col-md-18" >
+    <!--<form class="col-md-12" style="margin-left:-30%">-->
+      <div *ngIf="contact.name">
+        <label for="contact-name" style="margin-left:20px">UserName: 
+        <input class="form-control" name="contact-name" [(ngModel)]="contact.name" placeholder="userName"/>
+       </label>
+      </div>
+      <div *ngIf="contact.username">
+        <label for="contact-username" style="margin-left:20px">UserName: 
+        <input class="form-control" name="contact-username" [(ngModel)]="contact.username" placeholder="userName"/>
+       </label>
+      </div>
+      <div class="form-group">
+        <label for="contact-firstname" style="margin-left:20px">FirstName: 
+        <input class="form-control" name="contact-email" [(ngModel)]="contact.firstname" placeholder="Firstname"/>
+      </label>
+      </div>
+      <div class="form-group">
+        <label for="contact-lastname" style="margin-left:20px">LastName
+        <input class="form-control" name="contact-lastname" [(ngModel)]="contact.lastname" placeholder="Lastname"/>
+      </label>
+      </div>
+      <div class="form-group">
+        <label for="contact-email" style="margin-left:20px">Email: 
+        <input class="form-control" name="contact-email" [(ngModel)]="contact.email" placeholder="support@mlab.com"/>
+      </label>
+      </div>
+      <div class="form-group">
+        <label for="contact-password" style="margin-left:20px">Password:
+        <input class="form-control" type="password" name="contact-password" [(ngModel)]="contact.password" />
+      </label>
+      </div>
+      <div class="form-group">
+        <label for="contact-phone-mobile" style="margin-left:20px">Mobile: 
+        <input class="form-control" name="contact-phone-mobile" [(ngModel)]="contact.mobile" placeholder="1234567890"/>
+      </label>
+      </div>
+      <div class="form-group">
+        <label for="contact-phone-work" style="margin-left:20px">Work
+        <input class="form-control" name="contact-phone-work" [(ngModel)]="contact.work" placeholder="0123456789"/>
+      </label>
+      </div>
+      <div class="form-group">
+        <label for="contact-gender" style="margin-left:20px">Gender: </label><label style="margin-left: 20px;margin-top:10px">  </label>
+        <label style="padding-right: 10px;">{{contact.gender}}</label>
+        <select (change)="onSelectGender($event.target.value)" [(ngModel)]="contact.gender">
+        <option *ngFor="let genders of gender" value={{genders.id}} >
+            {{genders.name}}
+          </option>
+        </select>
+        <!--<input class="form-control" name="contact-gender" [(ngModel)]="contact.gender" placeholder=""/>-->
+      </div>
+      <div class="form-group">
+        <label for="contact-type" style="margin-left:20px">Type of User:  </label><label style="margin-left: 20px;margin-top:10px">  </label>
+        <label style="padding-right: 10px;" >{{contact.type}}</label>
+        <select (change)="onSelectType($event.target.value)" [(ngModel)]="contact.type" >
+          <option *ngFor="let types of type" value={{types.name}} >
+              {{types.name}}
+            </option>
+          </select>
+       <!-- <input class="form-control" name="contact-type" [(ngModel)]="contact.type" placeholder=""/>-->
+      </div>
+      <div class="form-group">
+        <label for="contact-role"style="margin-left:180px">Select Role:  </label> <label style="margin-left: 20px;margin-top:10px">  </label>
+        <label style="padding-right: 10px;">{{contact.role}}</label>
+        <select (change)="onSelectRole($event.target.value)" [(ngModel)]="contact.role" >
+          <option *ngFor="let roles of role" value={{roles.id}} >
+              {{roles.name}}
+            </option>
+          </select>
+          
+     <!-- <input class="form-control" name="contact-role" [(ngModel)]="contact.role" placeholder=""/>-->
+      </div>
+      <div style="margin-top:50px;margin-left: -300px;">
+      <button class="btn btn-primary" *ngIf="!contact._id" (click)="createContact(contact)" >Create</button>
+      <button class="btn btn-info " style="margin-left:10px" *ngIf="contact._id" (click)="updateContact(contact)" >Update</button>
+      <button class="btn btn-danger " style="margin-left:10px"  *ngIf="contact._id" (click)="deleteContact(contact._id)" >Delete</button>
+    </div>
+      <!--</form>-->
+  </div>

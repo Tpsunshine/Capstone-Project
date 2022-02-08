@@ -1,0 +1,40 @@
+
+    <div *ngIf="school" class="row">
+      <div class="col-md-6" style="margin-left:-30%;margin-top:10px">
+      </div>
+    </div>
+       <div *ngIf="school" class="row col-md-18" >
+        
+          
+            <label for="school-name" style="margin-left:20px">School Name
+            <input class="form-control" name="school-name" [(ngModel)]="school.schoolname" placeholder=""/>
+          </label>
+          <div class="form-group">
+            <label for="school-address" style="margin-left:20px">Address
+            <input class="form-control" name="school-address" [(ngModel)]="school.address" placeholder=""/>
+          </label>
+          </div>
+          <div class="form-group">
+            <label for="school-city" style="margin-left:20px">City:
+            <input class="form-control" name="school-city" [(ngModel)]="school.city" placeholder=""/>
+          </label>
+          </div>
+          <div class="form-group">
+            <label for="school-state" style="margin-left:20px">State:
+            <input class="form-control" name="school-state" [(ngModel)]="school.state" placeholder=""/>
+          </label>
+          </div>
+          <div class="form-group">
+            <label for="school-country" style="margin-left:20px">Country:
+            <input class="form-control" name="school-country" [(ngModel)]="school.country" placeholder=""/>
+          </label>
+          </div>
+          <div style="margin-top:50px;margin-left: -300px;">
+           <button class="btn btn-primary"  (click)="createSchool(school)" >Create</button>
+          <button class="btn btn-info" (click)="updateSchool(school)" >Update</button>
+          <button class="btn btn-danger"  (click)="deleteSchool(school._id)" >Delete</button>
+        </div>
+      </div>
+    
+
+  

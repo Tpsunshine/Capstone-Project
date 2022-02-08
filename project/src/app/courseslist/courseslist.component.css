@@ -1,0 +1,60 @@
+:host {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  padding: 5% 0;
+   scroll-behavior: initial;
+}
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+  float: left;
+}
+.dropdown-menu-arrow {
+top: -25px;
+left: 50%;
+width: 0;
+height: 0;
+position: absolute;
+}
+.dropdown-menu-arrow:before,
+.dropdown-menu-arrow:after {
+content: "";
+position: absolute;
+display: block;
+width: 0;
+height: 0;
+border-width: 7px 8px;
+border-style: solid;
+border-color: whitesmoke;
+z-index: 1001;
+}
+.dropdown-menu-arrow:after {
+bottom: -18px;
+right: -8px;
+border-bottom-color: #fff;
+}
+.dropdown-menu-arrow:before {
+bottom: -17px;
+right: -8px;
+border-bottom-color: rgba(0,0,0,.15);
+}
+.mat-form-field {
+  width: 100%;
+  min-width: 400px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: Left;
+
+}
+
+.mat-card-title {
+  border-bottom: 4px solid darkgreen;
+  padding-bottom: 0.5em;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}

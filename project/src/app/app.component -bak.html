@@ -1,0 +1,94 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<div class="topnav" id="myTopnav">
+<div class="header-container"  >
+  <div class="header-navigation-section">
+<div class="navbar navbar-default">
+    <div class="container" style="background: url('./../assets/imgs/school.jpg');">
+      <div id="navbar-main">
+        <div class="dropdown">
+          <button class="dropbtn" routerLink="/home">Home</button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Staff</button>
+          <div class="dropdown-content">
+            <a routerLink="/teachers">Teachers Portal</a>
+            <a href="#">Administrative Portal</a>
+            <a href="#">Finance Portal</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn2">Students</button>
+          <div class="dropdown-content2">
+            <a routerLink="/students">Portal</a>
+            <a href="#">Link 5</a>
+            <a href="#">Link 6</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn2">Course</button>
+          <div class="dropdown-content2">
+            <a routerLink="/courses">list of courses</a>
+            <a href="#">Search for Courses</a>
+            <a href="#">Link 6</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn2">School</button>
+        <div class="dropdown-content2">
+          <a routerLink="/school">list of schools</a>
+          <a href="#">Search for Schools</a>
+          <a href="#">Link 6</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn2" routerLink="/register">Site Registration</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn2" routerLink="/login">Login</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn2" routerLink="/home">Logout</button>
+      </div>
+     <!--   <ul class="nav navbar-nav">
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/teachers">Staff</a></li>
+          <li><a routerLink="/students">Students</a></li>
+          <li><a routerLink="/courses">Courses</a></li>
+          <li><a routerLink="/school">Schools</a></li>
+          <li><a routerLink="/register">Register</a></li>
+          <li><a routerLink="/login">Sign in</a></li>
+          <li><a routerLink="/home">Logout</a></li>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </ul>-->
+      </div>
+      
+    </div>
+ 
+  </div>
+  <main class="main">
+    <router-outlet></router-outlet>
+</main>
+</div>
+  
+</div>
+</div>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+</body>
+
+
+

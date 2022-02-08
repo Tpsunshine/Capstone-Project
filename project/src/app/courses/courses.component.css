@@ -1,0 +1,33 @@
+:host {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  padding: 5% 0;
+  background-size: cover;
+
+  scroll-behavior: initial;
+}
+.col-md-1[_ngcontent-plc-c4], .col-md-10[_ngcontent-plc-c4], .col-md-11[_ngcontent-plc-c4], .col-md-12[_ngcontent-plc-c4], .col-md-2[_ngcontent-plc-c4], .col-md-3[_ngcontent-plc-c4], .col-md-4[_ngcontent-plc-c4], .col-md-5[_ngcontent-plc-c4], .col-md-6[_ngcontent-plc-c4], .col-md-7[_ngcontent-plc-c4], .col-md-8[_ngcontent-plc-c4], .col-md-9[_ngcontent-plc-c4] {
+  float: left;
+}
+.mat-form-field {
+  width: 100%;
+  min-width: 400px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: Left;
+
+}
+
+.mat-card-title {
+  border-bottom: 4px solid darkgreen;
+  padding-bottom: 0.5em;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
